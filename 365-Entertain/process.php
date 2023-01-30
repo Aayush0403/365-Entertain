@@ -1,5 +1,14 @@
 <?php
 
+$hostname="localhost";
+$username ="root";
+$password="";
+$dbname="tt";
+
+$dbc=mysqli_connect($hostname,$username,$password,$dbname) or die("couldnot connect to dtabase".mysqli_connect_error());
+mysqli_set_charset($dbc,"utf8");
+
+
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
    $name=$_POST['username'];
@@ -7,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
    $pswd=$_POST['password'];
     if((!empty($name)and !empty($mail) and !empty($pswd)))
     {
-       include('connect.php');
+       include('index.php');
        
         $result= mysqli_query($dbc,"SELECT * FROM ft WHERE NAME='$name' AND EMAIL ='$mail'");
         $count=mysqli_num_rows($result);
