@@ -1,0 +1,270 @@
+
+.latest
+{
+  margin-top: 15px;
+}
+.list {
+  height: 270px;
+  display: flex;
+  justify-content:space-between; 
+  overflow-x: auto;
+}
+
+.movie {
+ 
+    width: 220px; 
+    min-width: 200px;
+    height: 250px;  
+    position: relative; 
+    overflow-y: hidden;
+    transition: linear .5s ;
+}
+
+.movie img {
+  width:90%;
+  height:100%;
+  cursor: pointer;
+  border-radius: 5px;  
+}
+
+.data{
+  height: 600px;
+  margin-top: -80px;
+  width: 100%;
+}
+.data img{
+  height: 400px;
+  width: 70%;
+  min-width:1000px;
+
+}
+
+.data .vertical{
+  height: 300px;
+  width: 15%;
+  min-width: 120px;
+  position: relative;
+  top:-280px;
+  left:10px;
+  border-radius: 4px;
+  background-color:rgba(22, 22, 22, 0.774);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(143, 142, 145, 0.87);
+}
+
+.banner-info{
+  color: rgb(192, 3, 3);
+  margin-top: -260px;
+  font-size: small;
+  display: flex;
+  width: 70%;
+  min-width: 900px;
+  justify-content: space-between;
+}
+.extra{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  min-width: 900px;
+ 
+
+}
+.close{
+  width: 80%;
+  margin-top: -18px;
+}
+.close p{
+   color: #fff;
+}
+.cutbanner{
+  display: inline-block;
+  height: 45px;
+  position: absolute;
+  top:15px;
+  right:25px;
+  cursor: pointer;
+  color: #fff;
+}
+.cutbanner:hover{
+  transform: scale(120%);
+  color:rgba(128, 128, 128, 0.804);
+}
+
+
+.overview {
+  background-color: rgba(247, 239, 239, 0.736);
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 100%;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.4s ease-in;
+  color: black;
+  font-weight: normal;
+  width: 90%;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+  background-color:rgba(22, 22, 22, 0.774);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(143, 142, 145, 0.6);
+  color: rgb(250, 249, 249);
+  cursor: pointer;
+}
+ .movie-info {
+  color: rgb(192, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.1rem ;
+  letter-spacing: 0.5px;
+  width: 90%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.comment{
+  float: right;
+  padding-right: 25px;
+}
+.movie:hover
+{
+  transform: scale(120%) translate(-5px);
+}
+
+.results{
+  position: absolute;
+  top:0;
+  margin-left:60px;
+  height:22%;
+  width: 90%;
+  background:transparent;
+  z-index: 99;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-left: 20px;
+  margin-top: 140px;
+}
+.results .review{
+  padding-bottom: 20px;
+}
+.srch-item{
+  position: absolute;
+  top:0;
+  left: 0;
+  height:402%;
+  width: 100%;
+  background-color:  rgba(5, 1, 27, 0.986);
+  display: flex;
+  overflow-x: auto;
+  z-index: 99;
+  padding-left: 20px;
+  padding-top: 140px;
+  color:#f2a223;
+  font-weight: bolder;
+
+}
+.srch-results{
+  margin-top: -80px;
+  width: 100%;
+}
+.srch-results .cut h2 {
+  margin-top: -90px;
+  padding-right: 60px;
+  z-index:inherit;
+  cursor: pointer;
+  width: 20px;
+  float: right;
+  color: #fff;
+  
+}
+.srch-results .cut h2:hover{
+    color: gray;
+    transform: scale(120%);
+}
+.nofound{
+ margin-left: 450px;
+}
+.embade{
+
+  position: absolute;
+  top:280px;
+  left: 50%;
+  
+}
+
+@media screen and (max-width:868px)
+{
+  .list{
+    height: 190px;
+    min-width:100px;
+  }
+  .movie{
+    width: 130px;
+    min-width: 130px;
+    height: 160px;
+  }
+  .overview{
+    width: 125px;
+    font-size: xx-small;
+  }
+  .movie-info{
+    font-size: small;
+  }
+  .comment{
+    padding-left: 17px;
+    padding-right: 15px;
+   
+  }
+  .data img{
+    margin-left: 0;
+    width: 100%;
+    height: 250px;
+    min-width:50%;
+  }
+  .data .vertical{
+    height: 180px;
+    width: 100px;
+    top:-160px;
+    min-width: 50px;
+  }
+  .data{
+    margin-left: -10px;
+    height: 260px;
+  }
+  .banner-info{
+    margin-top: -130px;
+    width: 100%;
+    min-width: 150px;
+  }
+  .extra{
+    display: block;
+    margin-top: 235px;
+    min-width:100px;
+  }
+  .close{
+    width: 100%;
+    margin-top: 1px;
+  }
+  .results{
+    margin-left: 0px;
+    padding-left: 40px;
+  }
+  .nofound{
+    margin-left: 150px;
+    position: absolute;
+   }
+   .embade{
+    position: absolute;
+    top:423px;
+    left: 24px;
+    
+  }
+  .srch-results .cut h2 {
+    padding-right: 35px;
+  }
+}
